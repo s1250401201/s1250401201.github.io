@@ -1,4 +1,4 @@
-/* Новая палитра: глубокий графит и аквамарин */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fafbfc;
@@ -8,12 +8,12 @@ body {
     line-height: 1.8;
 }
 
-/* Эпичный главный заголовок-баннер */
+
 .altay-header {
-    background-color: #1a2421; /* Благородный темный фон */
-    padding: 40px 20px; /* Уменьшили отступы, чтобы рамка стала уже */
+    background-color: #1a2421; 
+    padding: 40px 20px; 
     text-align: center;
-    border-bottom: 12px solid #2a9d8f; /* Сделали бирюзовую полоску снизу заметно толще */
+    border-bottom: 12px solid #2a9d8f;
 }
 
 .altay-header h1 {
@@ -32,7 +32,7 @@ body {
     font-weight: 300;
 }
 
-/* Контейнер страницы */
+
 .altay-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,7 +48,7 @@ body {
     font-weight: 300;
 }
 
-/* Стилизация асимметричных секций (Текст + Фото) */
+
 .altay-section {
     display: flex;
     align-items: center;
@@ -56,12 +56,12 @@ body {
     margin-bottom: 100px;
 }
 
-/* Разворачиваем второй блок зеркально */
+
 .altay-section.reverse {
     flex-direction: row-reverse;
 }
 
-/* Блок с текстом */
+
 .section-text {
     flex: 1;
     position: relative;
@@ -69,7 +69,7 @@ body {
 
 
 
-.section-text h3 {
+.section-text h2 {
     font-size: 28px;
     color: #1a2421;
     margin-top: 0;
@@ -88,7 +88,7 @@ body {
     color: #3d4f49;
 }
 
-/* Блок с фотографией */
+
 .section-image {
     flex: 1;
 }
@@ -103,10 +103,10 @@ body {
 }
 
 .section-image img:hover {
-    transform: scale(1.02); /* Легкий интерактив при наведении */
+    transform: scale(1.02); 
 }
 
-/* Панорамная галерея внизу */
+
 .full-width-gallery {
     margin-top: 80px;
     text-align: center;
@@ -128,7 +128,7 @@ body {
     font-style: italic;
 }
 
-/* Адаптивность для мобильных телефонов (все выстраивается в один аккуратный столбик) */
+
 @media (max-width: 900px) {
     .altay-header h1 { font-size: 44px; }
     .altay-section, .altay-section.reverse {
@@ -144,7 +144,7 @@ body {
     }
 }
 .card-button.light-blue-btn {
-    display: inline-block; /* Чтобы правильно работали отступы */
+    display: inline-block; 
     background-color: #2a9d8f;
     border: 1px solid #2a9d8f;
     color: #ffffff;
@@ -152,7 +152,7 @@ body {
     padding: 14px 35px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 0px; /* Прямые углы */
-    margin-top: 25px; /* Отодвигаем от текста сверху */
+    border-radius: 0px; 
+    margin-top: 25px; 
     transition: background-color 0.3s, border-color 0.3s;
 }
