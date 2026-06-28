@@ -1,0 +1,115 @@
+/* Общие настройки страницы в природных тонах */
+/* Палитра: глубокий графит и хвойный зеленый */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafbfc;
+    color: #1a2421;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Компактный главный заголовок-баннер */
+.altay-header {
+    background-color: #1a2421; /* Благородный темный фон */
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 12px solid #409065; /* Мощная зеленая полоса */
+}
+
+.altay-header h1 {
+    font-size: 44px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.header-subtitle {
+    font-size: 18px;
+    color: #a4f2d4;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+/* Контейнер страницы */
+.altay-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro-text {
+    font-size: 20px;
+    text-align: center;
+    max-width: 850px;
+    margin: 40px auto 60px auto;
+    color: #4a5954;
+    font-weight: 300;
+}
+
+/* Сетка карточек */
+.checklist-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+}
+
+/* Карточки со строгими прямыми углами */
+.checklist-card {
+    background-color: #ffffff;
+    border: 1px solid #e2ede9;
+    border-radius: 0px; /* Строгие прямые углы */
+    padding: 0 0 30px 0;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(26, 36, 33, 0.04);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Интеграция изображений в карточки */
+.card-image-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-bottom: 4px solid #3d8e63; /* Зеленая линия под фото */
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    transition: transform 0.5s;
+}
+
+/* Эффект при наведении на карточку */
+.checklist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(27, 61, 43, 0.15);
+    border-color: #4b9d71;
+}
+
+.checklist-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Названия карточек */
+.checklist-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #1a2421;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .altay-header h1 { font-size: 32px; }
+    .checklist-section { grid-template-columns: 1fr; }
+}

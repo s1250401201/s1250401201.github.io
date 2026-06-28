@@ -1,0 +1,183 @@
+/* ГЛОБАЛЬНЫЕ СТИЛИ (унаследованы от первой страницы для единообразия) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafbfc;
+    color: #1a2421;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Эпичный главный заголовок-баннер (с адаптацией под светло-голубой стиль) */
+.altay-header {
+    background-color: #1a2421; /* Благородный темный фон */
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.altay-header.light-blue {
+    border-bottom: 12px solid #5ba4e6; /* Светло-голубая полоса у компактной шапки */
+}
+
+.altay-header h1 {
+    font-size: 64px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.header-subtitle {
+    font-size: 20px;
+    color: #a3b8b0;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+/* Крупный читаемый шрифт для вводного абзаца */
+.intro-text.large-font {
+    font-size: 22px;
+    text-align: center;
+    max-width: 850px;
+    margin: 40px auto 80px auto;
+    line-height: 1.9;
+    color: #2c3a35;
+    font-weight: 300;
+}
+
+/* Сетка для рядов с текстом и маленькими фото */
+.journal-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px; /* Отступы по бокам для аккуратности */
+}
+
+.journal-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.journal-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Увеличенный размер шрифта для основного текста */
+.journal-text {
+    flex: 1.4;
+    position: relative;
+}
+
+.journal-text h2 {
+    font-size: 30px; /* Крупный заголовок */
+    color: #1a2421;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.journal-text p {
+    font-size: 18px; /* Увеличенный текст */
+    line-height: 1.8;
+    color: #3d4f49;
+    margin: 0;
+}
+
+/* Уменьшенный контейнер для фотографий */
+.journal-media-small {
+    flex: 1;
+    max-width: 380px; /* Ограничиваем ширину картинки */
+}
+
+.journal-media-small img {
+    width: 100%;
+    height: 260px; /* Фиксированная аккуратная высота */
+    object-fit: cover;
+    display: block;
+    border-radius: 0px; /* Строго прямоугольные углы */
+    border-bottom: 4px solid #5ba4e6; /* Светло-голубая линия */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s; /* Плавный интерактив при наведении как на стр. 1 */
+}
+
+.journal-media-small img:hover {
+    transform: scale(1.02); /* Легкое увеличение */
+}
+
+/* Светло-голубая прямоугольная кнопка */
+.card-button.light-blue-btn {
+    display: inline-block; /* Чтобы правильно работали отступы */
+    background-color: #5ba4e6;
+    border: 1px solid #5ba4e6;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0px; /* Прямые углы */
+    margin-top: 25px; /* Отодвигаем от текста сверху */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card-button.light-blue-btn:hover {
+    background-color: #3f8cd4;
+    border-color: #3f8cd4;
+}
+
+/* Панорамная галерея внизу (адаптированная под page2) */
+.full-width-gallery {
+    max-width: 1000px;
+    margin: 80px auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.full-width-gallery img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0px; /* Прямоугольный стиль страницы page2 */
+    border-bottom: 6px solid #5ba4e6; /* Тонкая голубая полоса в тон стилю */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.gallery-caption {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #53675c;
+    font-style: italic;
+}
+
+/* Адаптивность для смартфонов */
+@media (max-width: 768px) {
+    .altay-header h1 { font-size: 44px; }
+    
+    .intro-text.large-font {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .journal-row, .journal-row.reverse {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .journal-media-small {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .journal-media-small img {
+        height: 240px; /* Чуть уменьшаем высоту картинок на мобильных */
+    }
+    
+    .journal-text h2 { font-size: 24px; }
+    .journal-text p { font-size: 16px; }
+    
+    .full-width-gallery img {
+        height: 300px; /* Компактная галерея на мобильных */
+    }
+}
